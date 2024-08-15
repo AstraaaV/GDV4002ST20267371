@@ -1,0 +1,60 @@
+CAMERA:
+{
+	FOV:	45.0 
+	NEAR:	0.5
+	FAR:	100.0
+	POS:	0.0 0.0 10.0
+}
+
+LIGHT:
+{
+	POS:	0.0 0.0 10.0
+}
+
+MESH: torus.obj
+{
+	NAME:		player1
+	POS:		2.0 0.0 0.0
+	ROT:		-90.0 0.0 0.0
+	ROT_INCR:	0.0 0.0 0.0 
+	SCALE:		0.2 0.2 0.2
+	VEL:		0.0 0.0 0.0
+	SHADER_ID	0
+}
+
+MESH: torus.obj
+{
+	NAME:		player2
+	POS:		-2.0 0.0 0.0
+	ROT:		-90.0 0.0 0.0
+	ROT_INCR:	0.0 0.0 0.0 
+	SCALE:		0.2 0.2 0.2
+	VEL:		0.0 0.0 0.0
+	SHADER_ID	0
+}
+
+MESH: cube.obj
+{
+	NAME:		boulder
+	POS:		0.0 0.0 0.0
+	ROT:		-90.0 0.0 0.0
+	ROT_INCR:	0.0 -0.2 0.0 
+	SCALE:		0.3 0.3 0.3
+	VEL:		0.0 0.0 0.0
+	SHADER_ID	0
+}
+
+MESH: terrain.obj
+{
+	NAME:		ground
+	POS:		0.0 -3.0 0.0
+	ROT:		0.0 0.0 0.0
+	ROT_INCR:	0.0 0.0 0.0 
+	SCALE:		1.0 1.0 1.0
+	VEL:		0.0 0.0 0.0
+	SHADER_ID	2
+}
+
+SHADER:	shaders/diffuse	VERT_SHDR	FRAG_SHDR
+SHADER:	shaders/lines	VERT_SHDR	FRAG_SHDR
+SHADER: shaders/normals VERT_SHDR	GEOM_SHDR	FRAG_SHDR
